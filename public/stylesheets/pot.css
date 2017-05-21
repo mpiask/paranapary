@@ -1,4 +1,5 @@
 {code type=CSS}
+{code type=CSS}
 
 
 header{
@@ -12,8 +13,6 @@ h1 {
 
 #compose {
     position: relative;
-    margin: auto;
-    left: 230px;
     width: 930px;
 }
 #container {
@@ -109,7 +108,7 @@ h1 {
 
 #sliders {
     position: absolute;
-    left: 430px;
+    left: 400px;
     top: 200px;
     height: 200px;
     width: 300px;
