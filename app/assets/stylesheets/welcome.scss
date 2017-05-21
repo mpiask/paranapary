@@ -3,15 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     font-family: "lato";
-    background: #fff url("bcg.jpg") no-repeat fixed center; 
+    background: #fff url("/images/bcg.jpg") no-repeat fixed center; 
     background-size: 100%;
-    letter-spacing: 5px;
 }
 
 header{
     margin: auto;
     width: 930px;
     font-family: "lato";
+}
+
+h1, h2 {
+    font-family: "lato";
+    font-weight: 200;
+    font-size: 4em;
+    letter-spacing: 0.5em;
 }
 
 h1 {
@@ -48,14 +54,26 @@ div {
 .container {
     position: relative;
     height: auto;
+    
+    font-family: "lato";
+    font-weight: 300;
 }
 
 #navmenu {
     position:absolute;
     left: 0px;
     width: 200px;
+    font-family: "lato";
+    font-weight: 300;
+    letter-spacing: .2em;
+    
+}
+
+#navmenu li {
+    margin: 1em;
 }
 
 .content {
-    margin-left: 200px;
+    margin-left: 300px;
+    padding-top: 1em
 }
