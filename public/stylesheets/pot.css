@@ -19,7 +19,7 @@ h1 {
     position: absolute;
     height: 400px;
     width: 400px;
-    
+    left: 400px;
 }
 
 .fa {
@@ -92,7 +92,7 @@ h1 {
 
 .availherbs {
     position: absolute;
-    left: 430px;
+    left: 600px;
     width: 500px;
 }
 
@@ -108,7 +108,7 @@ h1 {
 
 #sliders {
     position: absolute;
-    left: 400px;
+    left: 600px;
     top: 200px;
     height: 200px;
     width: 300px;
