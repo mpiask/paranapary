@@ -9,22 +9,13 @@
     </div>
     <div class="content">
             <div class="herbs-img">
-                <div class="divTable" style="width: 200px;" >
+                <div class="divTable" style="width: 120px;" >
                     <div class="divTableBody">
                         <div class="divTableRow">
-                            <div class="divTableCell"></div>
-                            <div class="divTableCell"><a href="pot.html?base=1"><img src="/images/h1.jpg" alt=""></a></div>
-                            <div class="divTableCell"></div>
-                        </div>
-                        <div class="divTableRow">
-                            <div class="divTableCell"><a href="pot.html?base=2"><img src="/images/h2.jpg" alt=""></a></div>
-                            <div class="divTableCell"><a href="pot.html?base=3"><img src="/images/h3.jpg" alt=""></a></div>
-                            <div class="divTableCell"><a href="pot.html?base=4"><img src="/images/h4.jpg" alt=""></a></div>
-                        </div>
-                        <div class="divTableRow">
-                            <div class="divTableCell"></div>
-                            <div class="divTableCell"><a href="pot.html?base=5"><img src="/images/h5.jpg" alt=""></a></div>
-                            <div class="divTableCell"></div>
+                            <% @baseherbs.each do |baseherb| %>
+                            <div class="divTableCell"><%= link_to image_tag("/images/h" + baseherb.id.to_s + ".jpg"), controller: "welcome", action: "pot", id: baseherb.id %> <br>
+                            <%= baseherb.name %></div>
+                            <% end %>
                         </div>
                     </div>
                 </div>

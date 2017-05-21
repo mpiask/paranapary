@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag "pot" %>
+   
+<div class="mainheader">
+    <%= render :partial => "header" %>
+</div>
+<div class="container">
+    <div id="navmenu">
+        <%= render :partial => "navmenu" %>
+    </div>
+    <div id="compose">
+        <div id="container">
+            <div id="herbs">
+                <div id="herbe" class="brew"></div>
+                <div id="herb4" class="brew"></div>
+                <div id="herb3" class="brew"></div>
+                <div id="herb2" class="brew"></div>
+                <div id="herb1" class="brew"></div>
+                <div id="herb0" class="brew"></div>
+            </div>    
+            <div id="pot"></div>
+        </div>
+        <div class="availherbs" id="availherbs">
+            
+        </div>
+        <div id="sliders">
+            <div class="divTable herbtab">
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                        <div class="divTableCell" id="row0">
+                            <div class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" id="sliderb"></div>
+                        </div>
+                        <div class="divTableCell perc" id="perc0"></div>
+                        <div class="divTableCell name" id="name0"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <div class="divTableRow hidden" id="row1">
+                        <div class="divTableCell"><div class="slider" id="slider1"></div></div>
+                        <div class="divTableCell perc" id="perc1"></div>
+                        <div class="divTableCell name" id="name1"></div>
+                        <div class="divTableCell"><i class="fa fa-remove" onclick="removeherb(1)"></i></div>
+                    </div>
+                    <div class="divTableRow hidden" id="row2">
+                        <div class="divTableCell"><div class="slider" id="slider2"></div></div>
+                        <div class="divTableCell perc" id="perc2"></div>
+                        <div class="divTableCell name" id="name2"></div>
+                        <div class="divTableCell"><i class="fa fa-remove" onclick="removeherb(2)"></i></div>
+                    </div>
+                    <div class="divTableRow hidden" id="row3">
+                        <div class="divTableCell"><div class="slider" id="slider3"></div></div>
+                        <div class="divTableCell perc" id="perc3"></div>
+                        <div class="divTableCell name" id="name3"></div>
+                        <div class="divTableCell"><i class="fa fa-remove" onclick="removeherb(3)"></i></div>
+                    </div>
+                    <div class="divTableRow hidden" id="row4">
+                        <div class="divTableCell"><div class="slider" id="slider4"></div></div>
+                        <div class="divTableCell perc" id="perc4"></div>
+                        <div class="divTableCell name" id="name4"></div>
+                        <div class="divTableCell"><i class="fa fa-remove" onclick="removeherb(4)"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>

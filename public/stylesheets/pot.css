@@ -1,0 +1,189 @@
+{code type=CSS}
+
+
+header{
+    margin: auto;
+    width: 930px;
+}
+
+h1 {
+    padding-left: 100px;
+}
+
+#compose {
+    position: relative;
+    margin: auto;
+    left: 230px;
+    width: 930px;
+}
+#container {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    
+}
+
+.fa {
+    color: #ddd;
+}
+
+.hover {
+    color: #777;
+}
+
+#pot {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-image: url('/images/pot.svg');
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.brew {
+    background-position: top right;
+    position:relative;
+    vertical-align:bottom;    
+    clear:both;
+    left: 80px;
+    width: 250px;
+    bottom: 0px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    z-index: 1;
+}
+
+#herbs {
+    height: 400px;
+    position: absolute;
+}
+
+#herbe {
+    background: #fff;
+    height: 400px;
+}
+
+#herb0 {
+    background: #484;
+    height: 0;
+    bottom: 0;
+}
+
+#herb1 {
+    background-color: #4a4;
+    height: 0px;
+}
+
+#herb2 {
+    background-color: #4b4;
+    height: 0px;
+}
+
+#herb3 {
+    background-color: #4c4;
+    height: 0px;
+}
+
+#herb4 {
+    background-color: #4d4;
+    height: 0px;
+}
+
+.availherbs {
+    position: absolute;
+    left: 430px;
+    width: 500px;
+}
+
+.perc {
+    text-align: right;
+    width: 2.5em;
+}
+
+.name {
+    text-align: left;
+    width: 10em;
+}
+
+#sliders {
+    position: absolute;
+    left: 430px;
+    top: 200px;
+    height: 200px;
+    width: 300px;
+}
+
+div .slider {
+    width: 150px;
+}
+
+#sliderb {
+    width: 150px;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	display: table-cell;
+	padding: 1px 3px;
+}
+.divTableHeading {
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.ui-slider-horizontal {
+    height: .2em;
+}
+
+#sliderb.ui-widget-content{
+    border-color: black;
+    background: #484;
+}
+
+#slider1.ui-widget-content{
+    border-color: black;
+    background: #4a4;
+}
+#slider2.ui-widget-content{
+    border-color: black;
+    background: #4b4;
+}
+#slider3.ui-widget-content{
+    border-color: black;
+    background: #4c4;
+}
+#slider4.ui-widget-content{
+    border-color: black;
+    background: #4d4;
+}
+.ui-slider .ui-slider-handle {
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: -.3em;
+    background-color: black;
+    border-color: black;
+}
+
+.hidden {
+    display:none;
+}
+
+{/code}
