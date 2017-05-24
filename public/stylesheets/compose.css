@@ -23,3 +23,20 @@ img {
 .divTableBody {
 	display: table-row-group;
 }
+
+#descriptionpopup {
+    display: table-cell;
+    height: 200px; /*change this and the width
+    for the size of your initial circle*/
+    width: 200px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#descriptioncircle{
+    display: table-cell;
+    height: 400px;
+    width: 400px;
+}

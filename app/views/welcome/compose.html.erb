@@ -13,15 +13,19 @@
                     <div class="divTableBody">
                         <div class="divTableRow">
                             <% @baseherbs.each do |baseherb| %>
-                            <div class="divTableCell"><%= link_to image_tag("/images/h" + baseherb.id.to_s + ".jpg"), controller: "welcome", action: "pot", id: baseherb.id %> <br>
+                            <div class="divTableCell"><%= link_to image_tag("/images/h" + baseherb.id.to_s + ".jpg", style: "border: 4px solid " + baseherb.color, onmouseover: "showherbdesc(\""+baseherb.description+"\", \""+baseherb.color+"\")", onmouseleave: "hide()"), { controller: "welcome", action: "pot", id: baseherb.id } %> <br>
                             <%= baseherb.name %></div>
                             <% end %>
                         </div>
                     </div>
                 </div>
+                <div id="descriptionpopup"></div>
             </div>
     </div>
 </div>
+<img id="descriptioncircle">
 <div class="footer">
 
 </div>
+
+<%= javascript_include_tag "compose" %>

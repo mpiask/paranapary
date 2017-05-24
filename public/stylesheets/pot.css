@@ -110,7 +110,6 @@ h1 {
 #sliders {
     position: absolute;
     left: 600px;
-    top: 200px;
     height: 200px;
     width: 300px;
 }
@@ -127,8 +126,21 @@ div .slider {
 	display: table;
 	width: 100%;
 }
+
+div.herbname{
+    width: 75px;
+}
+p.herbname{
+    hyphens: auto;
+    width: 75px;
+    word-break: break-all;
+    font-size: smaller;
+    font-weight: 800;
+    margin: 0.25em;
+}
 .divTableRow {
 	display: table-row;
+    height: 80px;
 }
 .divTableHeading {
 	display: table-header-group;
@@ -136,6 +148,7 @@ div .slider {
 .divTableCell, .divTableHead {
 	display: table-cell;
 	padding: 1px 3px;
+    vertical-align: middle;
 }
 .divTableHeading {
 	display: table-header-group;
@@ -148,11 +161,7 @@ div .slider {
 .divTableBody {
 	display: table-row-group;
 }
-
-.ui-slider-horizontal {
-    height: .2em;
-}
-
+/*
 #sliderb.ui-widget-content{
     border-color: black;
     background: #484;
@@ -173,13 +182,27 @@ div .slider {
 #slider4.ui-widget-content{
     border-color: black;
     background: #4d4;
+}*/
+
+.ui-slider-horizontal {
+    height: .15em;
 }
-.ui-slider .ui-slider-handle {
-    width: 0.6em;
-    height: 0.6em;
-    margin-left: -.3em;
-    background-color: black;
+.ui-widget.ui-widget-content{
+    border: 0px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    background: black;
+    border: 0px;
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+}
+.ui-widget-content {
     border-color: black;
+    background: black;
+}
+.ui-slider-horizontal .ui-slider-handle{
+    margin-left: -0.4em;
 }
 
 .hidden {
