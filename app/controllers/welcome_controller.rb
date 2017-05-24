@@ -8,4 +8,7 @@ class WelcomeController < ApplicationController
         @baseherb = Baseherb.find(params[:id])
         #@addon = @baseherb.addons.find(params[:id])
     end
+    def brews
+        @baseherb = Baseherb.find(params[:id])     
+    end
 end

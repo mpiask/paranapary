@@ -132,8 +132,7 @@ div.herbname{
 }
 p.herbname{
     hyphens: auto;
-    width: 75px;
-    word-break: break-all;
+    width: 60px;
     font-size: smaller;
     font-weight: 800;
     margin: 0.25em;
@@ -203,6 +202,10 @@ p.herbname{
 }
 .ui-slider-horizontal .ui-slider-handle{
     margin-left: -0.4em;
+}
+
+.ui-slider-handle:focus{
+    outline: none;
 }
 
 .hidden {
