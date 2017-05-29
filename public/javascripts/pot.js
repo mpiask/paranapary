@@ -1,6 +1,6 @@
 var left = 100;
-var herbeh = 140; //px //herb 'empty' base height
-var potheight = 215*0.01; //px*0.01
+var herbeh = 80; //px //herb 'empty' base height
+var potheight = 205*0.01; //px*0.01
 var baseperc = 40; //% of base herb
 
 var perc = [10, 10, 10, 10, baseperc];
