@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170521124648) do
     t.string   "name"
     t.string   "color"
     t.text     "description"
+    t.string   "image"
     t.integer  "baseherb_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170521124648) do
     t.string   "name"
     t.string   "color"
     t.text     "description"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

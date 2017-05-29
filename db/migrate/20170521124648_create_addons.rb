@@ -4,6 +4,7 @@ class CreateAddons < ActiveRecord::Migration
             t.string :name
             t.string :color
             t.text :description
+            t.string :image
             t.references :baseherb, foreign_key: true
             t.timestamps null: false
         end
