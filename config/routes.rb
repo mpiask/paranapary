@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root 'welcome#index'
     get 'compose' => 'welcome#compose'
     get 'pot/:id' => 'welcome#pot'
+    get 'herbalab' => 'welcome#herbalab'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

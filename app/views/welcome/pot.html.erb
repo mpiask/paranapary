@@ -8,7 +8,7 @@
         <%= render :partial => "navmenu" %>
     </div>
     <div id="compose">
-        <div id="container">
+        <div id="herbscontainer">
             <div id="herbs">
                 <div id="herbe" class="brew"></div>
                         <%= render partial: 'brews', collection: @baseherb.addons, as: :addon %>
@@ -23,8 +23,12 @@
             </div>
         </div>
     </div>
+    <div id="descpopupcontainer">        
+        <div id="descriptionpopup"></div>
+    </div>
 </div>
 <div class="footer">
 
 </div>
 <%= javascript_include_tag "pot" %>
+<%= javascript_include_tag "compose" %>

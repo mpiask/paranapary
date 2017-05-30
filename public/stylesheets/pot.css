@@ -13,9 +13,10 @@ h1 {
 
 #compose {
     position: relative;
-    width: 930px;
+    width: 1000px;
 }
-#container {
+
+#herbscontainer {
     position: absolute;
     height: 300px;
     width: 300px;
@@ -47,6 +48,7 @@ h1 {
     clear:both;
     left: 20px;
     width: 240px;
+    top: 80px;
     bottom: 0px;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
@@ -61,32 +63,28 @@ h1 {
 }
 
 #herbe {
-    height: 300px;
+    background: #fff;
+    height: 205px;
 }
 
 #herb0 {
-    background: #484;
     height: 0;
     bottom: 0;
 }
 
 #herb1 {
-    background-color: #4a4;
     height: 0px;
 }
 
 #herb2 {
-    background-color: #4b4;
     height: 0px;
 }
 
 #herb3 {
-    background-color: #4c4;
     height: 0px;
 }
 
 #herb4 {
-    background-color: #4d4;
     height: 0px;
 }
 
@@ -108,7 +106,7 @@ h1 {
 
 #sliders {
     position: absolute;
-    left: 550px;
+    left: 520px;
     height: 300px;
     width: 300px;
 }
@@ -119,6 +117,26 @@ div .slider {
 
 #sliderb {
     width: 150px;
+}
+
+#descpopupcontainer {    
+    position: absolute;
+    left: 850px;
+    top: -50px;
+    height: 170px;
+    width: 170px;
+}
+
+#descriptionpopup {
+    /*display: table-cell;*/
+    display: none;
+    height: 150px; /*change this and the width
+    for the size of your initial circle*/
+    width: 150px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 .divTable{

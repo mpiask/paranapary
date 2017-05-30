@@ -1,5 +1,5 @@
 var left = 100;
-var herbeh = 80; //px //herb 'empty' base height
+var herbeh = 0; //px //herb 'empty' base height
 var potheight = 205*0.01; //px*0.01
 var baseperc = 40; //% of base herb
 
@@ -40,7 +40,6 @@ function updateheights(){
     }
     $("#herbe").css("height",herbeh+(100-sum)*potheight+"px")
 };
-
 
 
 $( document ).ready( function(){

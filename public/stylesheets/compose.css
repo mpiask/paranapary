@@ -1,7 +1,12 @@
-img {
+.herbs-img img {
     border-radius: 50%;
     width: 100px;   
     height: 100px;
+    background-color: #a6b7de;
+}
+
+.herbs-img {
+    text-align: center;
 }
 
 .divTable{
@@ -25,7 +30,8 @@ img {
 }
 
 #descriptionpopup {
-    display: table-cell;
+    /*display: table-cell;*/
+    display: none;
     height: 200px; /*change this and the width
     for the size of your initial circle*/
     width: 200px;
@@ -33,11 +39,12 @@ img {
     text-align: center;
     vertical-align: middle;
     border-radius: 50%;
-    display: none;
 }
 
-#descriptioncircle{
-    display: table-cell;
-    height: 400px;
-    width: 400px;
+.herbblock {
+    display:inline-block;
+    width: 120px;
+    height: 150px;
+    text-align: center;
+    vertical-align: top;
 }

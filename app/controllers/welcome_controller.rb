@@ -11,4 +11,10 @@ class WelcomeController < ApplicationController
     def brews
         @baseherb = Baseherb.find(params[:id])     
     end
+    def herbalab
+        @herbs = Baseherb.all
+        Addon.find_each do |addon|
+            @herbs << addon
+        end
+    end
 end
