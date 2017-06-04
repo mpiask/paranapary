@@ -7,14 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Addon.delete_all
 Baseherb.delete_all
-baseherbs = Baseherb.create!(name: "mięta", color: "rgb(196,237,194)", description: "Wiecznie zielone, lub częściowo zielone byliny. Ulistnienie naprzeciwległe, liście jajowate lub eliptyczne.", image: "mentha.svg", id: 1)
-baseherbs = Baseherb.create!(name: "rumianek", color: "rgb(226,224,205)", description: "Według aktualnych ujęć taksonomicznych należy do niego tylko 5 gatunków występujących na półkuli północnej na obszarach o umiarkowanym klimacie.", image: "matricaria.svg", id: 2)
-baseherbs = Baseherb.create!(name: "melisa", color: "rgb(234,211,198)", description: "Łodyga czworokątna, jak u innych przedstawicieli rodziny. Ulistnienie nakrzyżległe, liście pomarszczone, jajowate lub sercowate.", image: "melissa.svg", id: 3)
+baseherbs = Baseherb.create!(name: "mięta", color: "rgb(196,237,194)", description: "Wyciągi z liści mięty pobudzają czynności wydzielnicze żołądka i wątroby. Ułatwia trawienie i przyswajanie pokarmów. Napar z mięty wykazuje działanie rozkurczowe i obniżające napięcie mięsni gładkich oraz działa bakteriobójczo.", image: "mentha.svg", id: 1)
+baseherbs = Baseherb.create!(name: "rumianek", color: "rgb(226,224,205)", description: "Wyciąg z rumianku działa przeciwzapalnie na błony śluzowe i skórę. Spiroeter zawarty w naparze hamuje stany zapalne. Na włosy napary rumianki działają rozjaśniająco i nadają im lekko złocisty kolor.", image: "matricaria.svg", id: 2)
+baseherbs = Baseherb.create!(name: "melisa", color: "rgb(234,211,198)", description: "Melisa bogata jest w ariofilen i cytral - olejki eteryczne odpowiedzialne za obniżanie napięcia i powodujące ogólne uspokojenie. Jasnozielona barwa naparu wynika ze sporej ilości antyoksydantów. ", image: "melissa.svg", id: 3)
 
-Addon.create(name: "głóg", color: "rgb(214,207,224)", description: "xyz xyz xyz xyz xyz xyz", image: "crataegus.svg", baseherb_id: 1)
+Addon.create(name: "głóg", color: "rgb(214,207,224)", description: "Działa rozkurczowo na naczynia wieńcowe serca. Enzymy zawarte w głogu zwiększają dopływ krwi i lepiej utleniają organizm. Kwaskowy w posmaku.", image: "crataegus.svg", baseherb_id: 1)
 Addon.create(name: "ba&#173;zy&#173;lia in&#173;dyj&#173;ska", color: "rgb(215,232,200)", description: "xyz xyz xyz xyz xyz xyz", image: "ocimumbasilicum.svg", baseherb_id: 1)
-Addon.create(name: "pier&#173;wio&#173;snek le&#173;kar&#173;ski", color: "rgb(235,197,217)", description: "xyz xyz xyz xyz xyz xyz", image: "primulaveris.svg", baseherb_id: 1)
-Addon.create(name: "ró&#173;ża dzi&#173;ka", color: "rgb(248,200,184)", description: "xyz xyz xyz xyz xyz xyz", image: "rosacanina.svg", baseherb_id: 1)
+Addon.create(name: "pier&#173;wio&#173;snek le&#173;kar&#173;ski", color: "rgb(235,197,217)", description: "Ze względu na saponiny zawarte w pierwiosnku, usprawnia wykrztuszanie wydzieliny podczas chorób układu oddechowego. Ma lekko mineralny posmak.", image: "primulaveris.svg", baseherb_id: 1)
+Addon.create(name: "ró&#173;ża dzi&#173;ka", color: "rgb(248,200,184)", description: "Owoc dzikiej róży jest surowcem witaminowym (C,P. )Naturalna witamina C jest aktywniejsza od syntetycznej, gdyż towarzyszące jej flawonidy chronią ją przed agresywnymi sokami żołądkowymi.", image: "rosacanina.svg", baseherb_id: 1)
 Addon.create(name: "perz wła&#173;ści&#173;wy", color: "rgb(221,210,220)", description: "xyz xyz xyz xyz xyz xyz", image: "elymusrepens.svg", baseherb_id: 2)
 Addon.create(name: "szał&#173;wia le&#173;kar&#173;ska", color: "rgb(242,231,189)", description: "xyz xyz xyz xyz xyz xyz", image: "salviaofficinalis.svg", baseherb_id: 2)
 Addon.create(name: "świe&#173;tlik łą&#173;ko&#173;wy", color: "rgb(193,238,209)", description: "xyz xyz xyz xyz xyz xyz", image: "euphrasiarostkovianahayne.svg", baseherb_id: 2)

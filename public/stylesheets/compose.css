@@ -32,9 +32,9 @@
 #descriptionpopup {
     /*display: table-cell;*/
     display: none;
-    height: 200px; /*change this and the width
+    height: 230px; /*change this and the width
     for the size of your initial circle*/
-    width: 200px;
+    width: 230px;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
