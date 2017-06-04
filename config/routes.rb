@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
     get 'welcome/index'
-    root 'welcome#index'
+    get 'welcome/index'
+    root 'welcome#start'
     get 'compose' => 'welcome#compose'
     get 'pot/:id' => 'welcome#pot'
     get 'herbalab' => 'welcome#herbalab'
