@@ -9,13 +9,23 @@ function createslider(i, val){
     $("#slider"+i).slider({
         min: 0, max: 60, value: val,
         slide: function(event, ui) {
-            id = this.id.slice(-1);
+            var id = this.id.slice(-1);
             if(ui.value >= ui.value + left && ui.value > perc[id]) {
+                $(this).slider("value", perc[id]+left)
                 return false;
             }
+            document.getElementById("potperc").innerHTML = ui.value+"%";
             perc[id]=ui.value;
             updateheights();
-        }
+            return true;
+        },
+        start: function(event, ui) {
+            document.getElementById("potperc").innerHTML = ui.value+"%";
+            $("#potperc").fadeIn("fast");
+        },
+        stop: function(event, ui) {
+            $("#potperc").fadeOut("fast");
+    }
     }) //slider end
 };
 

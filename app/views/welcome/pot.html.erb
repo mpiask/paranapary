@@ -11,10 +11,10 @@
         <div id="herbscontainer">
             <div id="herbs">
                 <div id="herbe" class="brew"></div>
-                        <%= render partial: 'brews', collection: @baseherb.addons, as: :addon %>
-                        <%= content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color %>
+                <%= render partial: 'brews', collection: @baseherb.addons, as: :addon %>
+                <%= content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color %>
             </div>    
-            <div id="pot"></div>
+            <div id="pot"><div id="potperc"></div></div>
         </div>        
         <div id="sliders">
             <div class="divTable herbtab">

@@ -35,10 +35,20 @@ h1 {
     width: 300px;
     height: 300px;
     position: absolute;
+    display: table-cell;
     background-image: url('/images/pot.svg');
     background-repeat: no-repeat;
     background-position: center;
     z-index: 2;
+}
+
+#potperc {
+    text-align: center;
+    width: 2em;
+    margin-top: 130px;
+    margin-left: 60px;
+    font-size: 75px;
+    color: black;
 }
 
 .brew {

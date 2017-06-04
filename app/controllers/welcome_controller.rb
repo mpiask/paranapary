@@ -17,4 +17,6 @@ class WelcomeController < ApplicationController
             @herbs << addon
         end
     end
+    def about
+    end
 end
