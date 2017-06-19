@@ -6,6 +6,13 @@ html, body {
     background: #fff;
 }
 
-img {
+body {
+    background: url(/images/front.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+div#link{
+    margin: 0;
+    height: 100%;
     width: 100%;
 }
