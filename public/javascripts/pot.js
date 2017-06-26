@@ -21,10 +21,10 @@ function createslider(i, val){
         },
         start: function(event, ui) {
             document.getElementById("potperc").innerHTML = ui.value+"%";
-            $("#potperc").fadeIn("fast");
+            $("#potperc").stop(true,true).fadeIn("fast");
         },
         stop: function(event, ui) {
-            $("#potperc").fadeOut("fast");
+            $("#potperc").stop(true,true).fadeOut("fast");
     }
     }) //slider end
 };
