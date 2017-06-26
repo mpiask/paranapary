@@ -3,9 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     font-family: "lato";
-    //background: #fff url("/images/bcg.jpg") no-repeat fixed center; 
-    //background-size: 100%;
-    background-color: rgb(225,230,255);
+    background: #fff url("/images/bcg.jpg") no-repeat fixed center; 
+    background-size: 100%;
+    //background-color: rgb(225,230,255);
+}
+
+div {
+    //border: 1px solid black;
 }
 
 header{
@@ -22,7 +26,7 @@ h1, h2 {
 }
 
 h1 {
-    padding-left: 100px;
+    padding-left: 10vw;
     margin-bottom: 0;
 }
 
@@ -37,26 +41,17 @@ a {
 }
 
 .container {
-    width: 1050px;
+    width: 100%;
     margin: auto;
     margin-top: 4em;
-}
-
-div {
-    /*border: 1px solid black;*/
-}
-
-
-.mainheader {
-    padding-left: 10%;
-    font-family: sans-serif;
-}
-
-.container {
     position: relative;
     height: 400px;    
     font-family: "lato";
     font-weight: 300;
+}
+
+.mainheader {
+    font-family: sans-serif;
 }
 
 #navmenu {
@@ -71,6 +66,15 @@ div {
 
 #navmenu li {
     margin: 1em;
+}
+
+.tab { display:inline-block; 
+       margin-left: 40px; }
+.source {
+    color: #222;
+    font-style: italic;
+    text-align: right;
+    font-size: smaller;
 }
 
 .content {
