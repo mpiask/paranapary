@@ -1,5 +1,4 @@
 {code type=CSS}
-{code type=CSS}
 
 #compose {
     position: relative;
@@ -71,7 +70,7 @@
 
 #herbe {
     background: #fff;
-    height: 205px;
+    height: 170px;
 }
 
 #herb0 {
@@ -163,6 +162,30 @@ div .slider {
     #descpopupcontainer {
         left: 750px;
     }
+}
+
+#orderbutton {
+    position: relative;
+    font-size: 150%;
+    left: 80%;
+    font-weight: 100;
+}
+
+#ordercircle {
+    margin-left: 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#orderbutton.ready {
+    font-weight: 300;
+}
+#ordercircle.ready {
+    border-width: 2px;
 }
 
 .divTable{

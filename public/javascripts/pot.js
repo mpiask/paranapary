@@ -25,6 +25,14 @@ function createslider(i, val){
         },
         stop: function(event, ui) {
             $("#potperc").stop(true,true).fadeOut("fast");
+            
+        if(left<=0) {
+            $("#orderbutton").addClass("ready");
+            $("#ordercircle").addClass("ready");
+        } else {
+            $("#orderbutton").removeClass("ready");
+            $("#ordercircle").removeClass("ready");
+        };
     }
     }) //slider end
 };
