@@ -5,28 +5,35 @@
     background-color: #a6b7de;
 }
 
-.herbs-img {
+.herbs-img, .about-img {
     text-align: center;
+}
+
+.about-img img {
+    border-radius: 50%;
+    width: 100px;  
+    height: 100px;
+    background-color: #fff;
 }
 
 .divTable{
     position: relative;
-	display: table;
-	width: 100%;
+    display: table;
+    width: 100%;
     margin: auto;
 }
 .divTableRow {
-	display: table-row;
+    display: table-row;
 }
 .divTableCell, .divTableHead {
-	display: table-cell;
-	padding: 3px 15px;
+    display: table-cell;
+    padding: 3px 15px;
     height: 100px;
     width: 100px;
     text-align: center;
 }
 .divTableBody {
-	display: table-row-group;
+    display: table-row-group;
 }
 
 #descriptionpopup {
