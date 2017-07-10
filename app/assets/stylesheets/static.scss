@@ -1,0 +1,190 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    font-family: "lato";
+    background: #fff image_url('bcg.png') no-repeat fixed center; 
+    background-size: 100%;
+    //background-color: rgb(225,230,255);
+}
+
+div {
+    //border: 1px solid black;
+}
+
+header{
+    margin: auto;
+    width: 930px;
+    font-family: "lato";
+}
+
+h1, h2 {
+    font-family: "lato";
+    font-weight: 200;
+    font-size: 4em;
+    letter-spacing: 0.5em;
+}
+
+h1 {
+    padding-left: 10vw;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+    padding-left: 400px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 4em;
+    position: relative;
+    height: 400px;    
+    font-family: "lato";
+    font-weight: 300;
+}
+
+.mainheader {
+    font-family: sans-serif;
+}
+
+#navmenu {
+    position:absolute;
+    left: 0px;
+    width: 200px;
+    font-family: "lato";
+    font-weight: 300;
+    letter-spacing: .2em;
+    text-align: left;
+    
+}
+
+#navmenu li {
+    margin: 1em;
+}
+
+.tab { display:inline-block; 
+       margin-left: 40px; }
+.source {
+    color: #222;
+    font-style: italic;
+    text-align: right;
+    font-size: smaller;
+}
+
+.content {
+    margin-left: 250px;
+    padding-top: 1em;
+    text-align: justify;
+    font-style: italic;
+}
+
+b {
+    font-weight: 400;
+}
+
+//start page
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+div {
+	#link{
+	    margin: 0;
+	    height: 100%;
+	    width: 100%;
+	    }
+	#logo{
+	    position: absolute;
+	    height: 251px;
+	    width: 283px;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    margin: auto auto;
+	    background: image_url('logo.png') no-repeat;
+	    background-size: cover;
+	}
+}
+
+h1.logo {
+    padding-left: 0;
+    font-size: 8em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    font-family: "lato";
+}
+
+// compose
+
+.herbs-img img {
+    border-radius: 50%;
+    width: 100px;   
+    height: 100px;
+    background-color: #a6b7de;
+}
+
+.herbs-img, .about-img {
+    text-align: center;
+}
+
+.about-img img {
+    border-radius: 50%;
+    width: 100px;  
+    height: 100px;
+    background-color: #fff;
+}
+
+.divTable{
+    position: relative;
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableCell, .divTableHead {
+    display: table-cell;
+    padding: 3px 15px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+#descriptionpopup {
+    /*display: table-cell;*/
+    display: none;
+    height: 230px; /*change this and the width
+    for the size of your initial circle*/
+    width: 230px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.herbblock {
+    display:inline-block;
+    width: 120px;
+    height: 150px;
+    text-align: center;
+    vertical-align: top;
+}
