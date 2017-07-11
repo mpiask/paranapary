@@ -8,4 +8,10 @@ Rails.application.routes.draw do
 
   get 'herbalab', to: 'static#herbalab'
 
+  get 'select', to: 'mix#select'
+
+  get 'mix', to: 'mix#mix'
+
+  get 'order', to: 'mix#order'
+
 end
