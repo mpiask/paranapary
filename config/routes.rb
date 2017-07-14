@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 
   get 'about', to: 'static#about'
 
-  get 'herbalab', to: 'static#herbalab'
+  get 'herbalab', to: 'mix#herbalab'
+
+  get 'herbalab/:id', to: 'mix#showherb'
 
   get 'select', to: 'mix#select'
 
-  get 'mix', to: 'mix#mix'
+  get 'mix/:id', to: 'mix#mix'
 
   get 'order', to: 'mix#order'
 
