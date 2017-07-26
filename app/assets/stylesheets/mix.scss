@@ -172,6 +172,11 @@ div .slider {
     font-size: 150%;
     left: 80%;
     font-weight: 100;
+    color: #bbb;
+    .ready {
+        font-weight: 300;
+        color: black;
+    }
 }
 
 #ordercircle {
@@ -181,14 +186,10 @@ div .slider {
     height: 1em;
     width: 1em;
     border-radius: 50%;
-    border: 1px solid black;
-}
-
-#orderbutton.ready {
-    font-weight: 300;
-}
-#ordercircle.ready {
-    border-width: 2px;
+    border: 2px solid #bbb;
+    .ready {
+        border-color: black;
+    }
 }
 
 .divTable{
