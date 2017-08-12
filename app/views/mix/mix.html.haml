@@ -6,15 +6,16 @@
     #herbscontainer
       #herbs
         #herbe.brew
-        = render partial: 'brews', collection: @addons, as: :addon
+        = render partial: 'brews', collection: @ingredients, as: :brew
         = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color
       #pot
         #potperc
     #sliders
-      .divTable.herbtab
-        .divTableBody
-          = render partial: 'sliders', collection: @addons, as: :addon
-      = link_to content_tag(:div, "zamów".html_safe + content_tag(:div, "", id: "ordercircle"), id: "orderbutton")
+      = form_tag createjar_path do
+        .divTable.herbtab
+          .divTableBody
+            = render partial: 'sliders', collection: @ingredients, as: :addon
+      = link_to content_tag(:div, "zamów".html_safe + content_tag(:div, "", id: "ordercircle"), id: "orderbutton"), ''
   #descpopupcontainer
     #descriptionpopup
 .footer
@@ -23,5 +24,9 @@
 
   updatesliders();
   updateheights();
+
+  $("#orderbutton").click(function () {
+      orderbutton();
+  });
 
   });

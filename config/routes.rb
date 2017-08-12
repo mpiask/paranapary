@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'mix/:id', to: 'mix#mix'
 
+  post 'createjar', to: 'mix#createjar'
+
   get 'order', to: 'mix#order'
 
 end
