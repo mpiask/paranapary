@@ -1,7 +1,0 @@
-<% @index = addon_counter %>
-<%= content_tag :div, class: "divTableRow", onmouseover: "showherbdesc(\"#{addon.description}\", \"#{addon.color}\")", onmouseleave: "hide()" do -%>
-    <div class="divTableCell herbname"><p class="herbname"><%= CGI.unescapeHTML(addon.name).mb_chars.upcase.to_s %></p></div>
-    <div class="divTableCell">
-        <%= content_tag :div,"", id: "slider#{@index}"%>
-    </div>
-<% end -%>
