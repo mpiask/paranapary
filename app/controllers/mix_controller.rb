@@ -4,8 +4,8 @@ class MixController < ApplicationController
 	end
 	def mix
 		@baseherb = Herb.find(params[:id])
+		redirect_to select_path unless @baseherb.base
 		@addons = Herb.where(base: false, base_id: params[:id]).take(4)
-		#@index = 0
 	end
 	def herbalab
 		@herbs = Herb.all
