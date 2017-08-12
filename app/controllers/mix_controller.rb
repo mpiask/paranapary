@@ -13,30 +13,15 @@ class MixController < ApplicationController
 	end
 
 	def createjar
-		
+		params["herbmix"].each do |ingredient|
+			if ingredient["quantity"].to_i > 0
+				Ingredient.create(ingredients_params(ingredient))
+			end
+		end
 	end
 
-
-	# def mix
-	# 	@baseherb = Herb.find(params[:id])
-	# 	redirect_to select_url unless @baseherb.base == true
-	# 	@addons = Herb.where(base: false, base_id: params[:id]).take(4)
-	# 	#@index = 0
-	# 	@herbs = []
-	# 	@addons.each do |addon|
-	# 		@herbs << Jar.new(herb_id: addon.id)
-	# 	end
-	# 	@herbs << Jar.new(herb_id: @baseherb.id)
-	# end
-	# def createjar
-	# 	@order = Order.create(status: 1)
-	# 	@cart = Cart.create(order_id: @order.id)
-	# 	params["herbmix"].each do |herbinjar|
-	# 	if herbinjar["quantity"].to_i > 0
-	# 		herbinjar["cart_id"] = @cart.id
-	# 		Jar.create(herbmix_params(herbinjar))
-	# 	end
-	# end
+	def order
+	end
 
 	def herbalab
 		@herbs = Herb.all
@@ -44,4 +29,9 @@ class MixController < ApplicationController
 	def showherb
 		@herb = Herb.find(params[:id])
 	end
+
+	private
+		def ingredients_params(params)
+			params.permit(:quantity, :herb_id)
+		end
 end

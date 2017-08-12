@@ -51,7 +51,7 @@
 .brew {
     background-position: top right;
     position:relative;
-    vertical-align:bottom;    
+    vertical-align:bottom;
     clear:both;
     max-width: 130px;
     width: 100%;
@@ -128,7 +128,7 @@ div .slider {
     width: 150px;
 }
 
-#descpopupcontainer {    
+#descpopupcontainer {
     position: absolute;
     left: 75vw;
     top: -50px;
@@ -173,10 +173,11 @@ div .slider {
     left: 80%;
     font-weight: 100;
     color: #bbb;
-    .ready {
-        font-weight: 300;
-        color: black;
-    }
+}
+
+#orderbutton.ready {
+    font-weight: 300;
+    color: black;
 }
 
 #ordercircle {
@@ -187,9 +188,10 @@ div .slider {
     width: 1em;
     border-radius: 50%;
     border: 2px solid #bbb;
-    .ready {
-        border-color: black;
-    }
+}
+
+#ordercircle.ready {
+    border-color: black;
 }
 
 .divTable{
