@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20170813110354) do
     t.integer "herb_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "jar_id_id"
+    t.integer "jar_id"
     t.index ["herb_id"], name: "index_ingredients_on_herb_id"
-    t.index ["jar_id_id"], name: "index_ingredients_on_jar_id_id"
+    t.index ["jar_id"], name: "index_ingredients_on_jar_id"
   end
 
   create_table "jars", force: :cascade do |t|
