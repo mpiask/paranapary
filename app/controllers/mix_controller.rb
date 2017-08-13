@@ -13,15 +13,19 @@ class MixController < ApplicationController
 	end
 
 	def createjar
-		params["herbmix"].each do |ingredient|
-			if ingredient["quantity"].to_i > 0
-				Ingredient.create(ingredients_params(ingredient))
+		@jar = Jar.create(quantity: 1)
+		params["herbmix"].each do |ingr|
+			if ingr["quantity"].to_i > 0
+				ingredient = Ingredient.new(ingredients_params(ingr))
+				ingredient.jar_id = @jar.id
+				ingredient.save
 			end
 		end
 		redirect_to order_path
 	end
 
 	def order
+
 	end
 
 	def herbalab
@@ -33,6 +37,6 @@ class MixController < ApplicationController
 
 	private
 		def ingredients_params(params)
-			params.permit(:quantity, :herb_id)
+			params.permit(:quantity, :herb_id, :jar_id)
 		end
 end
