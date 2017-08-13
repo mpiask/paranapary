@@ -18,6 +18,7 @@ class MixController < ApplicationController
 				Ingredient.create(ingredients_params(ingredient))
 			end
 		end
+		redirect_to order_path
 	end
 
 	def order
