@@ -1,0 +1,15 @@
+=provide(:title, 'O nas')
+=render 'layouts/header'
+.container
+  =render 'layouts/navmenu'
+  .content
+    .about-img
+      .herbblock
+        =link_to image_tag("about/aa.jpg", style: "border: 4px solid #fff", onerror: "this.src='empty.svg'"),''
+        %br
+        Alą
+      .herbblock
+        =link_to image_tag("about/mp.jpg", style: "border: 4px solid #fff", onerror: "this.src='empty.svg'"),''
+        %br
+        Maciej
+.footer

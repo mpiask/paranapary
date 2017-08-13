@@ -1,0 +1,10 @@
+= jar.id
+.jarscontainer
+  .herbs
+    - jar.ingredients.each do |ingr|
+      = content_tag :div, "", class: "brew", style: "height: #{ingr.quantity}%; background-color: #{ingr.color}"
+  .pot
+
+-# - jar.ingredients.each do |ingr|
+-#   = ingr.name
+-#   = ingr.quantity

@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
 
+gem "haml-rails"
+gem "simple_form"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,6 +46,12 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'sqlite3', '1.3.13'
   gem 'rails-controller-testing'
+
+  gem 'ffaker'
+end
+
+group :test do
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 group :development do
@@ -52,6 +61,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'haml'
 end
 
 group :production do

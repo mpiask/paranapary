@@ -1,0 +1,6 @@
+- provide(:title, 'Zamów')
+= render 'layouts/header'
+.container
+  = render 'layouts/navmenu'
+  .content
+    = render partial: 'jars', collection: @jars, as: :jar

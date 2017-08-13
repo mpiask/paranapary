@@ -1,0 +1,32 @@
+- provide(:title, 'Namieszaj' )
+= render 'layouts/header'
+.container
+  = render 'layouts/navmenu'
+  #compose
+    .herbscontainer
+      .herbs
+        #herbe.brew
+        = render partial: 'brews', collection: @ingredients, as: :brew
+        = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color
+      .pot
+        #potperc
+    #sliders
+      = form_tag createjar_path do
+        .divTable.herbtab
+          .divTableBody
+            = render partial: 'sliders', collection: @ingredients, as: :addon
+      = link_to content_tag(:div, "zamów".html_safe + content_tag(:div, "", id: "ordercircle"), id: "orderbutton"), ''
+  #descpopupcontainer
+    #descriptionpopup
+.footer
+:javascript
+  $( document ).ready( function(){
+
+  updatesliders();
+  updateheights();
+
+  $("#orderbutton").click(function () {
+      orderbutton();
+  });
+
+  });

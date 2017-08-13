@@ -25,7 +25,8 @@ function createslider(i, val){
         },
         stop: function(event, ui) {
             $("#potperc").stop(true,true).fadeOut("fast");
-            
+            $("input#quantity"+i).val(ui.value);
+
         if(left<=0) {
             $("#orderbutton").addClass("ready");
             $("#ordercircle").addClass("ready");
@@ -70,6 +71,15 @@ function showherbdesc(description, color) {
 function hide(){
     //document.getElementById("descriptionpopup").style.display = "none";
     $("#descriptionpopup").stop(true,true).fadeOut(100);
+}
+
+
+function orderbutton() {
+    if(left == 0) {
+        $("form").submit();
+    } else {
+        window.alert('Najpierw napełnij dzbanek!');
+    }
 }
 
 
