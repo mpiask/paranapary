@@ -8,7 +8,7 @@
     width: 1000px;
 }
 
-#herbscontainer {
+.herbscontainer {
     position: absolute;
     max-width: 150px;
     max-height: 300px;
@@ -19,6 +19,16 @@
     left: 200px;
 }
 
+.jarscontainer {
+    position: relative;
+    max-width: 150px;
+    max-height: 300px;
+    min-width: 129px;
+    min-height: 258px;
+    width: 15vw;
+    height: 30vw;
+}
+
 .fa {
     color: #ddd;
 }
@@ -27,7 +37,7 @@
     color: #777;
 }
 
-#pot {
+.pot {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -63,7 +73,7 @@
     z-index: 1;
 }
 
-#herbs {
+.herbs {
     left: 12.5%;
     top: 26.5%;
     height: 64.5%;

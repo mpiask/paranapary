@@ -3,12 +3,12 @@
 .container
   = render 'layouts/navmenu'
   #compose
-    #herbscontainer
-      #herbs
+    .herbscontainer
+      .herbs
         #herbe.brew
         = render partial: 'brews', collection: @ingredients, as: :brew
         = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color
-      #pot
+      .pot
         #potperc
     #sliders
       = form_tag createjar_path do

@@ -1,6 +1,6 @@
 class MixController < ApplicationController
 	def select
-		redirect_to order_path if order_exists?
+		#redirect_to order_path if order_exists?
 		@baseherbs = Herb.where(base: true).take(3)
 	end
 
@@ -14,7 +14,7 @@ class MixController < ApplicationController
 	end
 
 	def createjar
-		create_order
+		create_order unless order_exists?
 		@jar = Jar.create(quantity: 1, order_id: current_order.id)
 		params["herbmix"].each do |ingr|
 			if ingr["quantity"].to_i > 0
