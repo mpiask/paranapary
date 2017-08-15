@@ -31,13 +31,6 @@ class MixController < ApplicationController
 		@jars = Jar.where(order_id: current_order.id)
 	end
 
-	def herbalab
-		@herbs = Herb.all
-	end
-	def showherb
-		@herb = Herb.find(params[:id])
-	end
-
 	private
 		def ingredients_params(params)
 			params.permit(:quantity, :herb_id, :jar_id)
