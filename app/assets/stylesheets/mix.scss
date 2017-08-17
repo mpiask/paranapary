@@ -4,23 +4,16 @@
 
 
 #compose {
-    position: relative;
     width: 1000px;
 }
 
 #herbscontainer {
-    position: absolute;
     max-width: 150px;
     max-height: 300px;
     min-width: 129px;
     min-height: 258px;
     width: 15vw;
     height: 30vw;
-    left: 200px;
-}
-
-.fa {
-    color: #ddd;
 }
 
 .hover {
@@ -30,8 +23,6 @@
 #pot {
     width: 100%;
     height: 100%;
-    position: absolute;
-    display: table-cell;
     background-image: image-url('pot.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -61,6 +52,8 @@
     -o-transition: height 0.5s ease-out;
     transition: height 0.5s ease-out;
     z-index: 1;
+
+    height: 0px;
 }
 
 #herbs {
@@ -77,30 +70,7 @@
 }
 
 #herb0 {
-    height: 0;
     bottom: 0;
-}
-
-#herb1 {
-    height: 0px;
-}
-
-#herb2 {
-    height: 0px;
-}
-
-#herb3 {
-    height: 0px;
-}
-
-#herb4 {
-    height: 0px;
-}
-
-.availherbs {
-    position: absolute;
-    left: 600px;
-    width: 500px;
 }
 
 .perc {
@@ -113,13 +83,6 @@
     width: 10em;
 }
 
-#sliders {
-    position: absolute;
-    left: 40vw;
-    height: 300px;
-    width: 300px;
-}
-
 div .slider {
     width: 150px;
 }
@@ -129,9 +92,9 @@ div .slider {
 }
 
 #descpopupcontainer {
-    position: absolute;
-    left: 75vw;
-    top: -50px;
+//     position: absolute;
+//     left: 75vw;
+//     top: -50px;
     height: 210px;
     width: 210px;
 }
@@ -139,36 +102,37 @@ div .slider {
 #descriptionpopup {
     /*display: table-cell;*/
     display: none;
-    height: 190px;
-    width: 190px;
+    height: 50%;
+    width: 50%;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
     border-radius: 50%;
 }
 
-@media all and (max-width: 860px) {
-    #sliders     {
-        margin-left: 0px;
-        left: 344px;
-    }
-    #descpopupcontainer {
-        left: 645px;
-    }
-}
-
-@media all and (min-width: 1000px) {
-    #sliders     {
-        margin-left: 0px;
-        left: 400px;
-    }
-    #descpopupcontainer {
-        left: 750px;
-    }
-}
+// @media all and (max-width: 860px) {
+//     #sliders     {
+//         margin-left: 0px;
+//         left: 344px;
+//     }
+//     #descpopupcontainer {
+//         left: 645px;
+//     }
+// }
+//
+// @media all and (min-width: 1000px) {
+//     #sliders     {
+//         margin-left: 0px;
+//         left: 400px;
+//     }
+//     #descpopupcontainer {
+//         left: 750px;
+//     }
+// }
 
 #orderbutton {
-    position: relative;
+    // position: relative;
+    float: right;
     font-size: 150%;
     left: 80%;
     font-weight: 100;
@@ -181,7 +145,7 @@ div .slider {
 }
 
 #ordercircle {
-    margin-left: 0.5em;
+    margin-left: .5em;
     vertical-align: middle;
     display: inline-block;
     height: 1em;

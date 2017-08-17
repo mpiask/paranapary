@@ -1,22 +1,24 @@
 = render 'layouts/header'
+
 .container
-  #navmenu
-    = render 'layouts/navmenu'
-  .content
-    %p
-      %span.tab>
-      W naszych czasach ziołolecznictwo zaczęło przybierać formę mody. Pojawiły się teorie o całkowitej nieszkodliwości ziół, o uniwersalnym ich działaniu. Nauka współczesna dysponuje jednak dowodami, że wiele roślin zawiera w swoim składzie dość silne trucizny. Źle zastosowane zioła mogą zaszkodzić, tylko prawidłowo użyte mogą przynieść wiele korzyści. Jednocześnie okazało się, że prawie zanikła ludowa wiedza o ziołach, o sposobach ich zbioru i przyrządzania. Wymarło już pokolenie naszych pra i praprababek, które żyły przed erą leków chemicznych i wiedziały, jak i kiedy stosować zioła.
-    %p
-      %span.tab>
-      Przyroda wprost fenomenalnie potrafi łączyć w niektórych roślinach silnie działające substancje z innymi łagodzącymi ich szkodliwe skutki, dlatego
-      %b leki pochdzenia roślinnego nadal są niedościgłym wzorem dla leków syntezowanych chemicznie.
-      Niewielkie dawki wyciągów roślinnychmają niejednokrotnie
-      %b silniejsze lub skuteczniejsze działanie
-      niż leki syntezy chemicznej.
-    %p
-      %span.tab>
-      Skład i właściwości lecznicze roślin zależą od wielu czynników, a przede wszystkim od warunków w jakich roślina ta żyje, od rodzaju gleby, nawożenia, właściwej pory zbiorów, sposobu konserwacji i przechowywania. Badania wykazały, że zioła uprawiane, dzięki lepszym warunkom glebowym, zabiegom pielęgnacyjnym, nawożeniu, selekcji nasiennej, zawierają zwykle
-      = succeed "," do
-        %b więcej i w większych stężeniach substancji leczniczych
-    %p.source Wstęp do Apteczki Ziołowej autorstwa Leszka Marka Krześniaka
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      %p
+        %span.tab>
+        W naszych czasach ziołolecznictwo zaczęło przybierać formę mody. Pojawiły się teorie o całkowitej nieszkodliwości ziół, o uniwersalnym ich działaniu. Nauka współczesna dysponuje jednak dowodami, że wiele roślin zawiera w swoim składzie dość silne trucizny. Źle zastosowane zioła mogą zaszkodzić, tylko prawidłowo użyte mogą przynieść wiele korzyści. Jednocześnie okazało się, że prawie zanikła ludowa wiedza o ziołach, o sposobach ich zbioru i przyrządzania. Wymarło już pokolenie naszych pra i praprababek, które żyły przed erą leków chemicznych i wiedziały, jak i kiedy stosować zioła.
+      %p
+        %span.tab>
+        Przyroda wprost fenomenalnie potrafi łączyć w niektórych roślinach silnie działające substancje z innymi łagodzącymi ich szkodliwe skutki, dlatego
+        %b leki pochdzenia roślinnego nadal są niedościgłym wzorem dla leków syntezowanych chemicznie.
+        Niewielkie dawki wyciągów roślinnychmają niejednokrotnie
+        %b silniejsze lub skuteczniejsze działanie
+        niż leki syntezy chemicznej.
+      %p
+        %span.tab>
+        Skład i właściwości lecznicze roślin zależą od wielu czynników, a przede wszystkim od warunków w jakich roślina ta żyje, od rodzaju gleby, nawożenia, właściwej pory zbiorów, sposobu konserwacji i przechowywania. Badania wykazały, że zioła uprawiane, dzięki lepszym warunkom glebowym, zabiegom pielęgnacyjnym, nawożeniu, selekcji nasiennej, zawierają zwykle
+        = succeed "," do
+          %b więcej i w większych stężeniach substancji leczniczych
+      %p.source Wstęp do Apteczki Ziołowej autorstwa Leszka Marka Krześniaka
 .footer

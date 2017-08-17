@@ -1,12 +1,14 @@
 - provide(:title, @herb.name.capitalize)
 = render 'layouts/header'
 .container
-  = render 'layouts/navmenu'
-  .content
-    .herbs-img
-      .herbblock
-        = link_to image_tag("/images/herbs/" + @herb.image, style: "border: 4px solid " + @herb.color, onerror: "this.src='/images/empty.svg'"), '#'
-        %br/
-        = CGI.unescapeHTML(@herb.name)
-    %p{:style => "text-align: center"} Tu napiszemy więcej o ziółkach.
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      .herbs-img
+        .herbblock
+          = link_to image_tag("/images/herbs/" + @herb.image, style: "border: 4px solid " + @herb.color, onerror: "this.src='/images/empty.svg'"), '#'
+          %br/
+          = CGI.unescapeHTML(@herb.name)
+      %p{:style => "text-align: center"} Tu napiszemy więcej o ziółkach.
 .footer
