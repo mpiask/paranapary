@@ -8,4 +8,7 @@ class StaticController < ApplicationController
 	def herbalab
 		@herbs = Herb.all
 	end
+	def showherb
+		@herb = Herb.find(params[:id])
+	end
 end

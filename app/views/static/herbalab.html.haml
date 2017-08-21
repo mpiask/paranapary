@@ -6,7 +6,7 @@
     .herbs-img
       - @herbs.each do |herb|
         .herbblock
-          = link_to image_tag("/images/herbs/" + herb.image, style: "border: 4px solid " + herb.color, onerror: "this.src='/images/empty.svg'"), { controller: "mix", action: "showherb", id: herb.id }
+          = link_to image_tag("/images/herbs/" + herb.image, style: "border: 4px solid " + herb.color, onerror: "this.src='/images/empty.svg'"), { controller: "static", action: "showherb", id: herb.id }
           %br/
           = CGI.unescapeHTML(herb.name)
     #descriptionpopup

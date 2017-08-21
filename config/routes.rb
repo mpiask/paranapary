@@ -6,16 +6,14 @@ Rails.application.routes.draw do
 
   get 'about', to: 'static#about'
 
-  get 'herbalab', to: 'mix#herbalab'
+  get 'herbalab', to: 'static#herbalab'
 
-  get 'herbalab/:id', to: 'mix#showherb'
+  get 'herbalab/:id', to: 'static#showherb'
 
   get 'select', to: 'mix#select'
 
-  get 'mix/:id', to: 'mix#mix'
-
-  post 'createjar', to: 'mix#createjar'
-
   get 'order', to: 'mix#order'
+
+  resources :jars, only: [:new, :create]
 
 end

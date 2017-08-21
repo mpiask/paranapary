@@ -11,7 +11,7 @@
       .pot
         #potperc
     #sliders
-      = form_tag createjar_path do
+      = form_tag jars_path do
         .divTable.herbtab
           .divTableBody
             = render partial: 'sliders', collection: @ingredients, as: :addon
@@ -25,8 +25,8 @@
   updatesliders();
   updateheights();
 
-  $("#orderbutton").click(function () {
-      orderbutton();
-  });
+    $("#orderbutton").click(function () {
+        orderbutton();
+    });
 
   });
