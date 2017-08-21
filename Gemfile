@@ -32,8 +32,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
 
-gem "haml-rails"
-gem "simple_form"
+gem 'haml-rails'
+gem 'simple_form'
+gem 'polish'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
