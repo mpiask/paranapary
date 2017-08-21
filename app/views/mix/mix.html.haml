@@ -21,9 +21,6 @@
             .divTableBody
               = render partial: 'sliders', collection: @ingredients, as: :addon
       = link_to content_tag(:div, "zamów".html_safe + content_tag(:div, "", id: "ordercircle"), id: "orderbutton"), ''
-    -# .col-md-2.col-xs-12
-    -#   #descpopupcontainer
-    -#     #descriptionpopup
 :javascript
   $( document ).ready( function(){
 
