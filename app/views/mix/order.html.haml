@@ -1,6 +1,8 @@
 - provide(:title, 'Zamów')
 = render 'layouts/header'
 .container
-  = render 'layouts/navmenu'
-  .content
-    = render partial: 'jars', collection: @jars, as: :jar
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      = render partial: 'jars', collection: @jars, as: :jar

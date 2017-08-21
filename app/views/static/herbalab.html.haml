@@ -1,6 +1,7 @@
 - provide(:title, 'Herba lab' )
 = render 'layouts/header'
 .container
+<<<<<<< HEAD:app/views/static/herbalab.html.haml
   = render 'layouts/navmenu'
   .content
     .herbs-img
@@ -10,4 +11,17 @@
           %br/
           = CGI.unescapeHTML(herb.name)
     #descriptionpopup
+=======
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      .herbs-img
+        - @herbs.each do |herb|
+          .herbblock
+            = link_to image_tag("/images/herbs/" + herb.image, style: "border: 4px solid " + herb.color, onerror: "this.src='/images/empty.svg'"), { controller: "mix", action: "showherb", id: herb.id }
+            %br/
+            = CGI.unescapeHTML(herb.name)
+      #descriptionpopup
+>>>>>>> c0725b531e5f92f964710f862c548e8cc1eb0801:app/views/mix/herbalab.html.haml
 .footer
