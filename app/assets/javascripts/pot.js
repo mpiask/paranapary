@@ -81,6 +81,3 @@ function orderbutton() {
         window.alert('Najpierw napełnij dzbanek!');
     }
 }
-
-
-//zmontować popup koło dzbanka
