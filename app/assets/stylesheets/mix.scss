@@ -7,20 +7,24 @@
     width: 1000px;
 }
 
-#herbscontainer {
+.herbscontainer {
     max-width: 150px;
     max-height: 300px;
     min-width: 129px;
     min-height: 258px;
     width: 15vw;
     height: 30vw;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-right: 25%;
 }
 
 .hover {
-    color: #777;
+    // color: #777;
 }
 
-#pot {
+.pot {
     width: 100%;
     height: 100%;
     background-image: image-url('pot.svg');
@@ -28,6 +32,7 @@
     background-position: center;
     background-size: cover;
     z-index: 2;
+    display: inline-block;
 }
 
 #potperc {
@@ -56,20 +61,21 @@
     height: 0px;
 }
 
-#herbs {
+.herbs {
     left: 12.5%;
     top: 26.5%;
     height: 64.5%;
     width: 75%;
     position: absolute;
+    z-index: -1;
 }
 
-#herbe {
+.herbe {
     background: #fff;
-    height: 170px;
+    height: 100%;
 }
 
-#herb0 {
+.herb0 {
     bottom: 0;
 }
 
@@ -95,8 +101,8 @@ div .slider {
 //     position: absolute;
 //     left: 75vw;
 //     top: -50px;
-    height: 210px;
-    width: 210px;
+  float: right;
+  margin-right: 10%;
 }
 
 #descriptionpopup {

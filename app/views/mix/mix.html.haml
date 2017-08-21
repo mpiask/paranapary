@@ -2,25 +2,28 @@
 = render 'layouts/header'
 .container
   .content.row
-    .col-md-2#navmenu
+    .col-md-2.col-xs-12#navmenu
       = render 'layouts/navmenu'
-    .col-md-2.col-md-offset-1#herbscontainer
-      #herbs
-        #herbe.brew
-        = render partial: 'brews', collection: @ingredients, as: :brew
-        = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color
-      #pot
-        #potperc
-    .col-md-3
+    .col-md-3.col-xs-4
+      .herbscontainer#herbscontainer
+        .herbs#herbs
+          .herbe#herbe.brew
+          = render partial: 'brews', collection: @ingredients, as: :brew
+          = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @baseherb.color
+        .pot#pot
+          #potperc
+      #descpopupcontainer
+        #descriptionpopup
+    .col-md-5.col-xs-7
       #sliders
         = form_tag createjar_path do
           .divTable.herbtab
             .divTableBody
               = render partial: 'sliders', collection: @ingredients, as: :addon
       = link_to content_tag(:div, "zamów".html_safe + content_tag(:div, "", id: "ordercircle"), id: "orderbutton"), ''
-    .col-md-3
-      #descpopupcontainer
-        #descriptionpopup
+    -# .col-md-2.col-xs-12
+    -#   #descpopupcontainer
+    -#     #descriptionpopup
 :javascript
   $( document ).ready( function(){
 
