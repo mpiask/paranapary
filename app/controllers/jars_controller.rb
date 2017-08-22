@@ -3,7 +3,7 @@ class JarsController < ApplicationController
   def new
     @baseherb = Herb.find(params[:base])
     redirect_to select_path unless @baseherb.base
-    @addons = Herb.where(base: false, base_id: params[:id]).take(4)
+    @addons = Herb.where(base: false, base_id: params[:base]).take(4)
     @ingredients = []
     @addons.each { |addon| @ingredients << Ingredient.new(herb_id: addon.id) }
     @ingredients << Ingredient.new(herb_id: @baseherb.id)
