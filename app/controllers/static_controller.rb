@@ -14,10 +14,10 @@ class StaticController < ApplicationController
 	end
 
 	def herbalab
-		@herbs = Herb.all
+		@herbs = Herb.all.decorate
 	end
 
 	def showherb
-		@herb = Herb.find(params[:id])
+		@herb = Herb.find(params[:id]).decorate
 	end
 end

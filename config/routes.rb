@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'herbalab/:id', to: 'static#showherb'
   get 'select', to: 'static#select'
 
-  resources :jars, only: [:new, :create]
+  resources :jars
   resources :orders
 
 end

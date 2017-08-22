@@ -22,6 +22,11 @@ class JarsController < ApplicationController
     redirect_to current_order
   end
 
+  def destroy
+    Jar.find(params[:id]).delete
+    redirect_to current_order
+  end
+
 
   private
     def ingredients_params(params)
