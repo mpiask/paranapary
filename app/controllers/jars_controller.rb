@@ -19,7 +19,7 @@ class JarsController < ApplicationController
         ingredient.save
       end
     end
-    redirect_to order_path
+    redirect_to current_order
   end
 
 

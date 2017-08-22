@@ -1,9 +1,22 @@
-= jar.id
-.herbscontainer
-  .pot
-  .herbs
-    - jar.ingredients.each do |ingr|
-      = content_tag :div, "", class: "brew", style: "height: #{ingr.quantity}%; background-color: #{ingr.color}"
+.row
+  .col-sm-3
+    .herbscontainer
+      .pot
+      .herbs
+        - jar.ingredients.each do |ingr|
+          = content_tag :div, "", class: "brew", style: "height: #{ingr.quantity}%; background-color: #{ingr.color}"
+  .col-sm-5.vcenter.ingredients
+    %ul
+      - jar.ingredients.each do |ingr|
+        %li
+          = "#{ingr.quantity}% #{ingr.name.upcase}" #draper
+    %br
+    %p
+      = link_to '< popraw', '#'
+    %p
+      = link_to 'x usuń', '#'
+  .col-sm-2.vcenter.counts
+    liczba
 
 -# - jar.ingredients.each do |ingr|
 -#   = ingr.name

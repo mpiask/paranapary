@@ -6,3 +6,8 @@
       = render 'layouts/navmenu'
     .col-md-8.col-md-offset-1
       = render partial: 'jars', collection: @jars, as: :jar
+      .row
+        .col-sm-4
+          = link_to '< chcesz coś jeszcze domieszać?'
+        .col-sm-4.col-sm-offset-3
+          = link_to 'zamów >'
