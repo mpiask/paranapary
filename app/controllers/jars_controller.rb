@@ -1,4 +1,5 @@
 class JarsController < ApplicationController
+  before_action :correct_order, only: [:destroy]
 
   def new
     @baseherb = Herb.find(params[:base])
@@ -29,6 +30,14 @@ class JarsController < ApplicationController
 
 
   private
+
+    def correct_order
+      @order = Jar.find(params[:id]).order
+      puts current_order 
+      puts @order
+      redirect_to(current_order) unless current_order?(@order)
+    end
+
     def ingredients_params(params)
       params.permit(:quantity, :herb_id, :jar_id)
     end

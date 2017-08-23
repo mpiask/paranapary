@@ -18,6 +18,10 @@ module ApplicationHelper
     @current_order ||= Order.find_by(id: session[:order_id])
   end
 
+  def current_order?(order)
+    @current_order == order
+  end
+
   def order_exists?
     !current_order.nil?
   end
