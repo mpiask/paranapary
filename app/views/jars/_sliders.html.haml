@@ -2,12 +2,22 @@
 = fields_for 'herbmix[]', addon do |f|
   - if addon.herb.base == false
     = content_tag :div, class: "divTableRow", onmouseover: "showherbdesc(\"#{addon.herb.description}\", \"#{addon.herb.color}\")", onmouseleave: "hide()" do
-      .divTableCell.herbname
-        %p.herbname= CGI.unescapeHTML(addon.herb.name).mb_chars.upcase.to_s
-      .divTableCell
+      .divTableCell.herbnamecell
+        %p.herbname= CGI.unescapeHTML(addon.herb.name).mb_chars.upcase.to_s #draper!
+      .divTableCell.slidercell
         = f.hidden_field :herb_id, :value => addon.herb.id
-        = content_tag :div,"", id: "slider#{@index}"
+        = content_tag :div,"", id: "slider#{@index}", class: "slider herb#{@index}"
         = f.hidden_field :quantity, :value => 10, :id => 'quantity' + @index.to_s
+      .divTableCell.percentcell
+        = content_tag :p, "", id: "percent#{@index}"
   - else
-    = f.hidden_field :herb_id, :value => addon.herb.id
-    = f.hidden_field :quantity, :value => 40
+    = content_tag :div, class: "divTableRow", onmouseover: "showherbdesc(\"#{addon.herb.description}\", \"#{addon.herb.color}\")", onmouseleave: "hide()" do
+      .divTableCell.herbnamecell
+        %p.herbname= "Baza: #{CGI.unescapeHTML(addon.herb.name).mb_chars.upcase.to_s}"
+      .divTableCell.slidercell
+        = f.hidden_field :herb_id, :value => addon.herb.id
+        = content_tag :div,"", id: "slider#{@index}", class: "baseslider" do
+          = content_tag :div, "", class: "ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+        = f.hidden_field :quantity, :value => 40, :id => 'quantity' + @index.to_s
+      .divTableCell.percentcell
+        = content_tag :p, "", id: "percent#{@index}"

@@ -137,14 +137,14 @@ div .slider {
     float: right;
     font-size: 150%;
     left: 80%;
-    font-weight: 100;
-    color: #bbb;
-}
-
-#orderbutton.ready {
     font-weight: 300;
-    color: black;
+    color: #000;
 }
+//
+// #orderbutton.ready {
+//     font-weight: 300;
+//     color: black;
+// }
 
 #ordercircle {
     margin-left: .5em;
@@ -153,28 +153,36 @@ div .slider {
     height: 1em;
     width: 1em;
     border-radius: 50%;
-    border: 2px solid #bbb;
+    border: 2px solid #000;
 }
-
-#ordercircle.ready {
-    border-color: black;
-}
+//
+// #ordercircle.ready {
+//     border-color: black;
+// }
 
 .divTable{
 	display: table;
 	width: 100%;
 }
 
-div.herbname{
-    width: 75px;
-}
-p.herbname{
+.herbname {
     hyphens: auto;
-    width: 60px;
     font-size: smaller;
     font-weight: 800;
     margin: 0.25em;
 }
+.herbnamecell {
+  width: 30%;
+}
+
+.percentcell {
+  width: 10%;
+}
+
+.slidercell {
+  width: 60%;
+}
+
 .divTableRow {
 	display: table-row;
     height: 80px;
