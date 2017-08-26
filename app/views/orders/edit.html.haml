@@ -1,0 +1,10 @@
+- provide(:title, 'Zamów')
+= render 'layouts/header'
+.container
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      .row
+        = render partial: 'small_jars', collection: @jars, as: :jar
+      .row

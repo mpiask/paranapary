@@ -20,12 +20,17 @@ class JarsController < ApplicationController
         ingredient.save
       end
     end
-    redirect_to current_order
+    redirect_to jars_path
   end
 
   def destroy
     Jar.find(params[:id]).delete
-    redirect_to current_order
+    redirect_to jars_path
+  end
+
+  def index
+    redirect_to select_path unless order_exists?
+    @jars = Jar.where(order_id: current_order.id)
   end
 
 

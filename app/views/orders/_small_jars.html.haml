@@ -1,0 +1,6 @@
+.col-sm-2
+  .smherbscontainer
+    .pot
+    .herbs
+      - jar.ingredients.each do |ingr|
+        = content_tag :div, "", class: "brew", style: "height: #{ingr.quantity}%; background-color: #{ingr.color}"
