@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826165250) do
+ActiveRecord::Schema.define(version: 20170826171401) do
 
   create_table "herbs", force: :cascade do |t|
     t.string "name"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170826165250) do
     t.boolean "paid", default: false
     t.boolean "confirmed", default: false
     t.decimal "value"
+    t.string "email"
   end
 
 end
