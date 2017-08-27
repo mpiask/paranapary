@@ -1,0 +1,27 @@
+- provide(:title, 'Zamów')
+= render 'layouts/header'
+.container
+  .content.row
+    .col-md-2#navmenu
+      = render 'layouts/navmenu'
+    .col-md-8.col-md-offset-1
+      Twoje zamówienie:
+      %ol
+        = render partial: 'jar_list', collection: @order.jars, as: :jar
+      %p
+        Wyślemy na adres:
+        %b
+          %br
+          = "#{@order.name} #{@order.surname}"
+          %br
+          = "#{@order.street}"
+          %br
+          = "#{@order.zipcode} #{@order.city}"
+          %br
+          = "tel.: #{@order.phone}"
+          %br
+          = "#{@order.email}"
+
+      Nie tak?
+      %br
+      = link_to "< Popraw!", edit_order_path(current_order)
