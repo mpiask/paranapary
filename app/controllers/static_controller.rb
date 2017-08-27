@@ -8,6 +8,9 @@ class StaticController < ApplicationController
 	def about
 	end
 
+	def why
+	end
+
 	def select
 		#redirect_to order_path if order_exists?
 		@baseherbs = Herb.where(base: true).take(3)

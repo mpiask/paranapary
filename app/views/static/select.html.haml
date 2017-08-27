@@ -11,7 +11,7 @@
             .divTableRow
               - @baseherbs.each do |baseherb|
                 .divTableCell
-                  = link_to image_tag("herbs/" + baseherb.image, style: "border: 4px solid " + baseherb.color, onmouseover: "showherbdesc(\""+baseherb.description+"\", \""+baseherb.color+"\")", onmouseleave: "hide()"), { controller: "jars", action: "new", base: baseherb.id }
+                  = link_to image_tag("/images/herbs/" + baseherb.image, style: "border: 4px solid " + baseherb.color, onmouseover: "showherbdesc(\""+baseherb.description+"\", \""+baseherb.color+"\")", onmouseleave: "hide()", onerror: "this.src='/images/empty.svg'"), { controller: "jars", action: "new", base: baseherb.id }
                   %br/
                   = baseherb.name
       #descriptionpopup
