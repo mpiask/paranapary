@@ -7,26 +7,34 @@
     .col-md-8.col-md-offset-1
       .row
         = render partial: 'small_jars', collection: @jars, as: :jar
-      =minimal_form_for @order do |f|
+      =minimal_form_for @order, defaults: { label: false, input_html: { class: 'form-control input-sm' }} do |f|
         .row
           .col-sm-3
-            =f.input :name
+            .form-group
+              =f.input :name
           .col-sm-3
-            =f.input :surname
+            .form-group
+              =f.input :surname
         .row
           .col-sm-6
-            =f.input :email
+            .form-group
+              =f.input :email
         .row
           .col-sm-6
-            =f.input :street
+            .form-group
+              =f.input :street
         .row
           .col-sm-2
-            =f.input :zipcode
+            .form-group
+              =f.input :zipcode
           .col-sm-4
-            =f.input :city
+            .form-group
+              =f.input :city
         .row
           .col-sm-6
-            =f.input :phone
+            .form-group
+              =f.input :phone
         .row
           .com-sm-6
-            =f.submit 'Zamów!'
+            .form-group
+              =f.submit 'Zamów!'
