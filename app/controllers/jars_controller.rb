@@ -24,7 +24,9 @@ class JarsController < ApplicationController
   end
 
   def destroy
-    Jar.find(params[:id]).delete
+    @jar = Jar.find(params[:id])
+    @jar.ingredients.delete_all
+    @jar.delete
     redirect_to jars_path
   end
 
@@ -38,7 +40,7 @@ class JarsController < ApplicationController
 
     def correct_order
       @order = Jar.find(params[:id]).order
-      puts current_order 
+      puts current_order
       puts @order
       redirect_to(current_order) unless current_order?(@order)
     end
