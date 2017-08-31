@@ -48,7 +48,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'sqlite3', '1.3.13'
   gem 'rails-controller-testing'
-
+  gem 'rspec-rails'
   gem 'ffaker'
 end
 
