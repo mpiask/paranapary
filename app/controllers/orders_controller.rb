@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   def edit
-    redirect_to select_path unless order_exists?
+    redirect_to select_path unless current_order.jars.any?
     @order = current_order
-    @jars = Jar.where(order_id: current_order.id)
+    @jars = Jar.where(order_id: @order.id)
   end
 
   def update

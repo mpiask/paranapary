@@ -10,16 +10,16 @@ module ApplicationHelper
   end
 
   def create_order
-    @current_order = Order.create
-    session[:order_id] = @current_order.id
+    session[:order_id] = Order.create.id
   end
 
   def current_order
-    @current_order ||= Order.find_by(id: session[:order_id])
+    @current_order = Order.find_by(id: session[:order_id])
+    @current_order ||= Order.create
   end
 
   def current_order?(order)
-    @current_order == order
+    Order.find_by(id: session[:order_id]) == order
   end
 
   def order_exists?
