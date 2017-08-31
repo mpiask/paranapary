@@ -50,6 +50,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'ffaker'
+  gem 'factory_girl_rails'
 end
 
 group :test do
