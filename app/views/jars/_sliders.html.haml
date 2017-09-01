@@ -1,13 +1,13 @@
-- @index = addon_counter
-= fields_for 'herbmix[]', addon do |f|
-  - if addon.herb.base == false
-    = content_tag :div, class: "divTableRow", onmouseover: "showherbdesc(\"#{addon.herb.description}\", \"#{addon.herb.color}\")", onmouseleave: "hide()" do
+- @index = herb_counter
+= f.fields_for :ingredients do |ff|
+  - if herb.base == false
+    = content_tag :div, class: "divTableRow", onmouseover: "showherbdesc(\"#{herb.description}\", \"#{herb.color}\")", onmouseleave: "hide()" do
       .divTableCell.herbname
-        %p.herbname= CGI.unescapeHTML(addon.herb.name).mb_chars.upcase.to_s
+        %p.herbname= CGI.unescapeHTML(herb.name).mb_chars.upcase.to_s
       .divTableCell
-        = f.hidden_field :herb_id, :value => addon.herb.id
+        = ff.hidden_field :herb_id, :value => herb.id
         = content_tag :div,"", id: "slider#{@index}"
-        = f.hidden_field :quantity, :value => 10, :id => 'quantity' + @index.to_s
+        = ff.hidden_field :quantity, :value => 10, :id => 'quantity' + @index.to_s
   - else
-    = f.hidden_field :herb_id, :value => addon.herb.id
-    = f.hidden_field :quantity, :value => 40
+    = ff.hidden_field :herb_id, :value => herb.id
+    = ff.hidden_field :quantity, :value => 40

@@ -2,6 +2,8 @@ class Jar < ApplicationRecord
   belongs_to :order
   has_many :ingredients, dependent: :delete_all
 
+  accepts_nested_attributes_for :ingredients
+
   # validate :must_be_full
 
   def fullness

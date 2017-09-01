@@ -2,25 +2,26 @@ class JarsController < ApplicationController
   before_action :correct_order, only: [:destroy]
 
   def new
+    # @jar = Jar.new(order_id: current_order.id)
+    @jar = current_order.jars.build
+    puts @jar
+    @jar.ingredients.build
     @baseherb = Herb.find(params[:base])
     redirect_to select_path unless @baseherb.base
     @addons = Herb.where(base: false, base_id: params[:base]).take(4)
-    @ingredients = []
-    @addons.each { |addon| @ingredients << Ingredient.new(herb_id: addon.id) }
-    @ingredients << Ingredient.new(herb_id: @baseherb.id)
+    @herbs = @addons << @baseherb
+    # @addons.each { |addon| @ingredients << Ingredient.new(herb_id: addon.id) }
+    # @ingredients << Ingredient.new(herb_id: @baseherb.id)
   end
 
   def create
     create_order unless order_exists?
-    @jar = Jar.create(quantity: 1, order_id: current_order.id)
-    params["herbmix"].each do |ingr|
-      if ingr["quantity"].to_i > 0
-        ingredient = Ingredient.new(ingredients_params(ingr))
-        ingredient.jar_id = @jar.id
-        ingredient.save
-      end
+    @jar = current_order.jars.build(jar_params(params))
+    if @jar.save
+      redirect_to jars_path
+    else
+      redirect_to select_path
     end
-    redirect_to jars_path
   end
 
   def destroy
@@ -44,8 +45,7 @@ class JarsController < ApplicationController
       puts @order
       redirect_to(current_order) unless current_order?(@order)
     end
-
-    def ingredients_params(params)
-      params.permit(:quantity, :herb_id, :jar_id)
+    def jar_params(params)
+      params.require(:jar).permit(:quantity, :herb_id, :jar_id, ingredients_attributes: [:herb_id, :quantity])
     end
 end
