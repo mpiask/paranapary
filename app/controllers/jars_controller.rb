@@ -2,14 +2,14 @@ class JarsController < ApplicationController
   before_action :correct_order, only: [:destroy]
 
   def new
-    @baseherb = Herb.find(params[:base])
-    redirect_to select_path unless @baseherb.base
-    @addons = Herb.where(base: false, base_id: params[:base]).take(4)
+    baseherb = Herb.find(params[:base])
+    redirect_to select_path unless baseherb.base
+    addons = Herb.where(base: false, base_id: params[:base]).take(4)
 
     create_order unless order_exists?
     @jar = current_order.jars.build
     @jar.ingredients.build
-    @herbs = @addons << @baseherb
+    @herbs = addons << baseherb
   end
 
   def create
@@ -38,8 +38,6 @@ class JarsController < ApplicationController
 
     def correct_order
       @order = Jar.find(params[:id]).order
-      puts current_order
-      puts @order
       redirect_to(current_order) unless current_order?(@order)
     end
     def jar_params(params)

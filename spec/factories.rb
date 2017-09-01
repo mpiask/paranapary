@@ -37,7 +37,7 @@ FactoryGirl.define do
   end
 
   factory :ingredient do
-    quantity 20
+    quantity 100
     association :herb, factory: :herb, strategy: :build
     association :jar, factory: :jar, strategy: :build
   end
