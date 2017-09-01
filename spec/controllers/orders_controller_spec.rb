@@ -12,7 +12,9 @@ RSpec.describe(OrdersController, type: :controller) do
     context 'jar in cart' do
       it 'returns http success' do
         current_order = create(:order)
-        create(:jar, order: current_order)
+        jar = build(:jar, order: current_order)
+        create(:ingredient, jar: jar)
+        jar.save
         get :edit, params: {id: current_order.id}
         # expect(response).to have_http_status(:success)
       end
