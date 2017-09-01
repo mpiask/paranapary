@@ -2,20 +2,17 @@ class JarsController < ApplicationController
   before_action :correct_order, only: [:destroy]
 
   def new
-    # @jar = Jar.new(order_id: current_order.id)
-    @jar = current_order.jars.build
-    puts @jar
-    @jar.ingredients.build
     @baseherb = Herb.find(params[:base])
     redirect_to select_path unless @baseherb.base
     @addons = Herb.where(base: false, base_id: params[:base]).take(4)
+
+    create_order unless order_exists?
+    @jar = current_order.jars.build
+    @jar.ingredients.build
     @herbs = @addons << @baseherb
-    # @addons.each { |addon| @ingredients << Ingredient.new(herb_id: addon.id) }
-    # @ingredients << Ingredient.new(herb_id: @baseherb.id)
   end
 
   def create
-    create_order unless order_exists?
     @jar = current_order.jars.build(jar_params(params))
     if @jar.save
       redirect_to jars_path

@@ -4,7 +4,7 @@ class Jar < ApplicationRecord
 
   accepts_nested_attributes_for :ingredients
 
-  # validate :must_be_full
+  validate :must_be_full
 
   def fullness
     self.ingredients.map {|x| x[:quantity] }.sum
