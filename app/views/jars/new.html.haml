@@ -9,7 +9,6 @@
         .herbs#herbs
           .herbe#herbe.brew
           = render partial: 'brews', collection: @herbs, as: :brew
-          = content_tag :div, "", id: "herb4", class: "brew", style: "background-color: " + @herbs.last.color
         .pot#pot
           #potperc
       #descpopupcontainer
