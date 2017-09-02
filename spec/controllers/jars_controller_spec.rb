@@ -17,10 +17,13 @@ RSpec.describe(JarsController, type: :controller) do
       end
     end
   end
-  # describe 'POST #create' do
-  #   it 'returns http success' do
-  #   end
-  # end
+  describe 'POST #create' do
+    context 'with 5 ingredients' do
+      it 'creates new jar' do
+        post :create, jar: create(:jar)
+      end
+    end
+  end
   # describe 'DELETE #destroy' do
   #   it 'returns http success' do
   #   end

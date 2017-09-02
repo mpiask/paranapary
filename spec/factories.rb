@@ -34,12 +34,13 @@ FactoryGirl.define do
   factory :jar do
     quantity 1
     association :order, factory: :order, strategy: :build
+    association :ingredients, factory: :ingredient, strategy: :build
   end
 
   factory :ingredient do
     quantity 100
     association :herb, factory: :herb, strategy: :build
-    association :jar, factory: :jar, strategy: :build
+    # association :jar, factory: :jar, strategy: :build
   end
 
 end
